@@ -215,6 +215,9 @@ a {
 .header__content {
   display: flex;
 }
+.header__content a {
+  color: #ffffff;
+}
 
 .header__ul {
   display: flex;
@@ -223,9 +226,6 @@ a {
 .header__ul li {
   font-size: 1.25rem;
   line-height: 1.5rem;
-}
-.header__ul li a {
-  color: #ffffff;
 }
 
 .header__phone {
@@ -275,7 +275,7 @@ a {
   }
   .header__content {
     position: absolute;
-    background-color: rgba(54, 54, 54, 0.979);
+    background: #AEB77E;
     top: 0;
     left: 0;
     flex-direction: column;
@@ -493,9 +493,6 @@ a {
     gap: 40px 0;
     flex-direction: column;
   }
-  .about__info:nth-child(even) {
-    margin-top: 0;
-  }
 }
 @media (max-width: 500px) {
   .about__section {
@@ -517,8 +514,8 @@ a {
     padding: 0 20px;
     gap: 20px 0;
   }
-  .about__info span {
-    font-size: 1.5rem;
+  .about__info {
+    line-height: 1.9rem;
   }
   .about__info p {
     margin: 0;
@@ -666,8 +663,9 @@ a {
 }
 @media (max-width: 500px) {
   .classes__text span {
-    padding: 10px 30px 0;
-    font-size: 0.75rem;
+    padding: 15px 30px 0;
+    font-size: 0.875rem;
+    font-weight: 800;
   }
   .classes__btn {
     font-size: 0.75rem;
@@ -730,6 +728,7 @@ a {
 
 .product-extra__link {
   position: relative;
+  color: #000000;
   padding: 22px 14px 22px 97px;
   display: inline-block;
   margin-right: auto;
@@ -1393,6 +1392,44 @@ a {
     padding: 15px 30px 10px 5px;
   }
 }
+@media (max-width: 768px) {
+  .popup__container {
+    border: 13px solid #AEB77E;
+  }
+  .popup__close {
+    top: 15px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  .popup__close span {
+    height: 2px;
+    width: 60%;
+  }
+  .popup__close::after {
+    height: 2px;
+    width: 60%;
+  }
+  .pupup__title {
+    margin-top: 20px;
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+  .popup__form {
+    margin-top: 20px;
+  }
+  .popup__form input {
+    padding: 10px 0 10px 5px;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 500px) {
+  .popup__form input {
+    padding: 15px 30px 10px 5px;
+    font-size: 0.875rem;
+  }
+}
 .lotus__footer {
   margin-top: auto;
   background: #D4D9BC;
@@ -1746,16 +1783,23 @@ a {
     left: -15px;
   }
   .register__form {
+    margin-top: 40px;
     gap: 17px;
   }
   .register__form input {
     padding: 5px 0 5px 5px;
     border-radius: 5px;
+    width: 120px;
   }
 }
 @media (max-width: 500px) {
   .register__title::after, .register__title::before {
     width: 30px;
     height: 20px;
+  }
+}
+@media (max-width: 370px) {
+  .register__form {
+    flex-wrap: wrap;
   }
 }
